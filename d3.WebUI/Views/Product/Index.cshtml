@@ -1,0 +1,16 @@
+﻿@model d3.Sales.Application.QueryModels.Product.ProductsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<a href="@Url.Action("Create")">Create product</a> 
+
+<ul>
+    @foreach (var product in Model.Products)
+    {
+        <li>@product.Name</li>
+    }
+</ul>
